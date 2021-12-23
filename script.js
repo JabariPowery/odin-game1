@@ -87,29 +87,4 @@ function playRound (playerSelection, computerSelection) {
 }
 
 
-function game() {
-    let pscore = 0, pSelection;
-    let cscore = 0, cSelection;
-    for (let i = 1; i <= 5; i++) {
-        pSelection = prompt("Enter rock, paper, or scissors: ");
-        cSelection = computerPlay();
-        console.log(playRound(pSelection, cSelection));
-        if (playRound(pSelection, cSelection) === "win") {
-            pscore += 1;
-        } 
-        else if (playRound(pSelection, cSelection) === "lose") {
-            cscore += 1;
-        }
-    }
-    if (pscore > cscore) {
-        console.log("Player wins the game! Score was " + pscore + " to " + cscore);
-    }
-    else
-    {
-        console.log("Computer wins the game! Score was " + pscore + " to " + cscore);
-    }
-}
-
-console.log(game());
-
 
